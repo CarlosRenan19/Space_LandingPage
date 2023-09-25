@@ -1,0 +1,210 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', sans-serif;
+}
+
+body {
+    background-color: #325;
+    min-height: 100vh;
+    overflow: hidden;
+}
+
+header {
+    padding: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.menu-hamburguer {
+    display: none;
+}
+
+.mobile-menu::after {
+    content: '\e5d2';
+    font-family: 'material symbols outlined';
+    color: #fff;
+    font-size: 2.5em;
+}
+
+.mobile-menu.effect::after {
+    content: '\e5cd';
+}
+
+.logo {
+    text-decoration: none;
+    color: #fff;
+    font-size: 1.6em;
+    font-weight: 500;
+    letter-spacing: 4px;
+}
+
+.links-header {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    transition: 0.5s;
+}
+
+.links-header.effect {
+    left: 0;
+}
+
+.links-header a {
+    text-decoration: none;
+    text-align: center;
+    color: #fff;
+    font-size: 1.2em;
+    transition: 0.5s;
+    opacity: 0.7;
+    width: 100%;
+    padding: 5px;
+}
+
+.links-header a:hover {
+    opacity: 1;
+}
+
+.links-header a:nth-of-type(5) {
+    border: 1px solid #fff;
+    padding: 15px 40px;
+    border-radius: 30px;
+}
+
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    margin-top: 50px;
+}
+
+.info-text {
+    width: 500px;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    color: #fff;
+}
+
+.info-text span {
+    opacity: 0.7;
+}
+
+.info-text h2 {
+    font-size: 2.3em;
+    margin-bottom: 20px;
+}
+
+.info-text p {
+    opacity: 0.9;
+    font-size: 1.1em;
+    margin-bottom: 30px;
+}
+
+.info-text button {
+    width: 200px;
+    padding: 15px;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    background-color: rgb(216, 99, 248);
+    color: #fff;
+    font-size: 1.1em;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.438);
+    transition: 0.5s;
+}
+
+.info-text button:hover {
+    background-color: rgb(202, 11, 255);
+}
+
+.imagens {
+    position: relative;
+    width: 500px;
+    height: 311.2px;
+}
+
+.planeta {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 40%;
+}
+
+.pontos {
+    position: absolute;
+    top: 100px;
+    right: 120px;
+    width: 40%;
+}
+
+.foguete {
+    position: absolute;
+    top: 30px;
+    right: 150px;
+    width: 40%;
+}
+
+footer {
+    position: sticky;
+    top: 100%;
+}
+
+.nuvem {
+    width: 100%;
+}
+
+/*REPONSIVIDADE*/
+
+@media (max-width: 780px) {
+    .links-header {
+        flex-direction: column;
+        position: absolute;
+        top: 108px;
+        left: -100%;
+        background-color: #291a3b;
+        width: 100%;
+        padding: 30px;
+        gap: 50px;
+        z-index: 999;
+    }
+
+    .links-header a {
+        opacity: 1;
+    }
+
+    .menu-hamburguer {
+        display: block;
+    }
+
+    header {
+        justify-content: space-between;
+    }
+}
+
+@media (max-width: 1135px) {
+
+    .container {
+        flex-direction: column;
+        gap: 50px;
+    }
+
+    .foguete {
+        right: 100px;
+    }
+}
+
+@media (max-width: 520px) {
+
+    .info-text {
+        width: 100%;
+        align-items: center;
+        text-align: center;
+    }
+
+    .imagens {
+        width: 100%;
+    }
+}
